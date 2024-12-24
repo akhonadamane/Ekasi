@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=" initial-scale=1.0">
+    <title>Ekasi Makethe - Product Listing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ekasi Makethe - Product Listing</h1>
+        
+        <!-- Step 1: Take Picture -->
+        <div class="form-container">
+            <button id="takePicBtn">📸 Take a Pic</button>
+        </div>
+
+        <!-- Step 2: Product description and details -->
+        <div class="form-container">
+            <button id="voiceInputBtn" disabled>🎙️ Start Voice Input</button>
+            <form id="productForm">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" readonly>
+
+                <label for="colorOptions">Color Options:</label>
+                <select id="colorOptions">
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="maroon">Maroon</option>
+                    <option value="silver">Silver</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="productState">Product State:</label>
+                <select id="productState">
+                    <option value="new">New</option>
+                    <option value="used-good">Used (Good Condition)</option>
+                    <option value="used-bad">Used (Bad Condition)</option>
+                </select>
+
+                <button type="submit">Submit Product</button>
+            </form>
+        </div>
+
+        <!-- Step 3: Display product -->
+        <div id="productPreview" style="display:none;">
+            <h2>Product Preview</h2>
+            <img id="productImage" src="" alt="Product Image" style="max-width: 400px;">
+            <p id="productDetails"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
