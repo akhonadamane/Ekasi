@@ -109,7 +109,7 @@
         <div class="form-container">
             <button id="voiceInputBtn" disabled>🎙️ Start Voice Input</button>
             <form id="productForm">
-                <label for="productName">Product Name:</label>
+                <label for="productName">Product Description:</label>
                 <input type="text" id="productName" readonly>
 
                 <label for="colorOptions">Color Options:</label>
@@ -121,7 +121,7 @@
                     <option value="other">Other</option>
                 </select>
 
-                <label for="productState">Product State:</label>
+                <label for="productState">Product condition:</label>
                 <select id="productState">
                     <option value="new">New</option>
                     <option value="used-good">Used (Good Condition)</option>
@@ -218,8 +218,8 @@
                 event.preventDefault();
                 const color = document.getElementById('colorOptions').value;
                 const condition = document.getElementById('productState').value;
-                const randomPrice = (Math.random() * (5000 - 100) + 100).toFixed(2);
-                const description = `${productNameInput.value} | Color: ${color} | Condition: ${condition} | Price: R${randomPrice}`;
+                const randomPrice = (Math.random() * (2000 - 100) + 100).toFixed(2);
+                const description = `${productNameInput.value} | Color: ${color} | Condition: ${condition} | Recommended Price: R${randomPrice}`;
                 productDetails.textContent = description;
             });
         });
